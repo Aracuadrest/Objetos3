@@ -1,4 +1,4 @@
-package gestion;
+package clases;
 
 public class Avión {
 

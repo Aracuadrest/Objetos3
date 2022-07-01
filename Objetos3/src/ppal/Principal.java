@@ -1,6 +1,9 @@
-package gestion;
+package ppal;
 
 import java.util.Scanner;
+
+import clases.Cuenta;
+import clases.Persona;
 
 public class Principal {
 
@@ -9,17 +12,18 @@ public class Principal {
 		
 		//Persona
 		
-		Persona p1 = new Persona();
+		Persona p1 = new Persona("Ana",32,"50000000a");
+		Persona p2 = new Persona();
 		
 		System.out.println("Introduce los datos:");
 		System.out.println("Nombre: ");
-		p1.setNombre(teclado.nextLine());
+		p2.setNombre(teclado.nextLine());
 		
 		System.out.println("DNI: ");
-		p1.setDni(teclado.nextLine());
+		p2.setDni(teclado.nextLine());
 		
 		System.out.println("Edad: ");
-		p1.setEdad(teclado.nextInt());
+		p2.setEdad(teclado.nextInt());
 		
 		
 		
@@ -37,13 +41,13 @@ public class Principal {
 		c1.mostrar();
 		
 		c1.ingresar(1200);
-		System.out.println(c1.getCantidad());
+		System.out.println(c1.getSaldo());
 		c1.ingresar(-14.16f);
-		System.out.println(c1.getCantidad());
+		System.out.println(c1.getSaldo());
 		c1.retirar(20);
-		System.out.println(c1.getCantidad());
+		System.out.println(c1.getSaldo());
 		
-		//Avión
+		/*//Avión
 		
 		Avión a1 = new Avión("Airbus",4);
 		Avión a2 = new Avión("Lookheed",4);
@@ -76,6 +80,7 @@ public class Principal {
 		System.out.println("La valoración de la pelicula "+peli2.getNombre()+" es "+peli2.calcularValoracion());
 	
 		System.out.println("La pelicula "+peli1.getNombre()+" es similar a la pelicula "+peli2.getNombre()+" ?"+peli1.esSimilar(peli2));
+	*/
 	}
 	
 

@@ -1,4 +1,4 @@
-package gestion;
+package clases;
 
 public class Persona {
 	private String nombre;
@@ -7,8 +7,18 @@ public class Persona {
 	
 	
 	public Persona() {
-		
+		this.nombre="";
+		this.dni="";
+		this.edad=0;
 	}
+	
+	public Persona(String nombre, int edad, String dni) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+		this.setDni(dni);
+	}
+
 
 	public String getNombre() {
 		return nombre;
@@ -31,7 +41,9 @@ public class Persona {
 	}
 
 	public void setDni(String dni) {
-		this.dni = dni;
+		if(dni.length()==9 && Character.isLetter(dni.charAt(8))) {
+			this.dni=dni;
+		}
 	}
 	
 	public void mostrar() {
